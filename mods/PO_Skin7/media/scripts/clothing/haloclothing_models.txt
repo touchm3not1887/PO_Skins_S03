@@ -1,0 +1,10 @@
+module Base
+{
+	model MChelmetWI
+	{
+		mesh    = WorldItems/MCHelmetWI,
+		texture = Clothes/MCHelmet,
+		scale   = 1.00,
+	}
+
+}

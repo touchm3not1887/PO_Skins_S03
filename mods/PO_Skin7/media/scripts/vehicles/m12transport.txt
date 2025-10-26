@@ -1,0 +1,519 @@
+module Base
+{
+	model m12transportBase
+	{
+		mesh = vehicles/Vehicles_m12warthog_Body|m12_body_transport,
+		shader = vehicle_multiuv,
+		static = TRUE,
+		scale = 0.1,
+	}
+	model m12transportinterior
+	{
+		mesh = vehicles/Vehicles_m12warthog_Body|m12t_interior,
+		texture = Vehicles/Vehicles_m12warthog_Interior_Wheel,
+		shader = vehiclewheel,
+		scale = 0.1,
+	}
+	model m12transportradio
+	{
+		mesh = vehicles/Vehicles_m12warthog_Body|m12_radio,
+		texture = Vehicles/Vehicles_m12warthog_Interior_Wheel,
+		shader = vehiclewheel,
+		scale = 0.1,
+	}
+	model m12warthogwindshield
+	{
+		mesh = vehicles/Vehicles_m12warthog_Body|m12_windshield,
+		shader = vehicle,
+		static = FALSE,
+		scale = 0.1,
+	}
+	model m12warthoghood
+	{
+		mesh = vehicles/Vehicles_m12warthog_Body|m12_hood,
+		shader = vehicle,
+		static = FALSE,
+		scale = 0.1,
+	}
+	model m12warthogmuffler
+	{
+		mesh = vehicles/Vehicles_m12warthog_Body|m12_mufflers,
+		shader = vehicle,
+		static = FALSE,
+		scale = 0.1,
+	}
+	model m12warthogseatfl
+	{
+		mesh = vehicles/Vehicles_m12warthog_Body|m12_driver_seat,
+		texture = Vehicles/Vehicles_m12warthog_Interior_Wheel,
+		shader = vehiclewheel,
+		scale = 0.1,
+	}
+	model m12warthogseatfr
+	{
+		mesh = vehicles/Vehicles_m12warthog_Body|m12_seat,
+		texture = Vehicles/Vehicles_m12warthog_Interior_Wheel,
+		shader = vehiclewheel,
+		scale = 0.1,
+	}
+	model m12warthogwheelleft
+	{
+		mesh = vehicles/Vehicles_m12warthog_Wheel|m12L_wheel,
+		texture = vehicles/Vehicles_m12warthog_Interior_Wheel,
+		shader = vehiclewheel,
+	}
+	model m12warthogwheelright
+	{
+		mesh = vehicles/Vehicles_m12warthog_Wheel|m12R_wheel,
+		texture = vehicles/Vehicles_m12warthog_Interior_Wheel,
+		shader = vehiclewheel,
+	}
+	vehicle m12transport
+	{
+		mechanicType = 2,
+		offRoadEfficiency = 7.5,
+		engineRepairLevel = 4,
+		playerDamageProtection = 1.3,
+
+		model
+		{
+			file = m12transportBase,
+			scale = 0.7700,
+			offset = 0.0000 0.5658 0.0000,
+		}
+
+		skin
+		{
+			texture = Vehicles/Vehicles_m12transport_Shell,
+		}
+
+		skin
+		{
+			texture = Vehicles/Vehicles_m12transport_Shell_brown,
+		}
+
+		skin
+		{
+			texture = Vehicles/Vehicles_m12transport_Shell_desertTan,
+		}
+
+		skin
+		{
+			texture = Vehicles/Vehicles_m12transport_Shell_gray,
+		}
+
+		skin
+		{
+			texture = Vehicles/Vehicles_m12transport_Shell_black,
+		}
+
+		skin
+		{
+			texture = Vehicles/Vehicles_m12transport_Shell_cherry,
+		}
+
+		skin
+		{
+			texture = Vehicles/Vehicles_m12transport_Shell_spiffo,
+		}
+
+		skin
+		{
+			texture = Vehicles/Vehicles_m12transport_Shell_Militek,
+		}
+
+
+		textureRust = Vehicles/Vehicles_m12transport_Rust,
+		textureMask = Vehicles/Vehicles_m12transport_Mask,
+		textureLights = Vehicles/Vehicles_m12transport_Lights,
+		textureDamage1Shell = Vehicles/Vehicles_m12transport_Damage,
+		textureDamage2Shell = Vehicles/Vehicles_m12transport_Damage2,
+		textureDamage1Overlay = Vehicles/Vehicles_m12warthog_Blood,
+		textureDamage2Overlay = Vehicles/Vehicles_m12warthog_Blood,
+
+		sound
+		{
+			engine = VehicleEngineOffRoad,
+			engineStart = VehicleEngineOffRoad,
+			engineTurnOff = VehicleEngineOffRoad,
+			horn = vehicle_horn_m12,
+			ignitionFail = VehicleIgnitionFailOffRoad,
+		}
+
+		extents = 2.9737 1.6842 6.0789,
+		mass = 1100,
+		physicsChassisShape = 2.9737 1.6842 6.0789,
+		centerOfMassOffset = 0.0000 0.8684 -0.0395,
+		shadowExtents = 3.1119 5.7060,
+		shadowOffset = -0.0032 -0.0032,
+		engineForce = 7755,
+		gearRatioCount = 4,
+		gearRatioR = 14.8,
+		gearRatio1 = 13.4,
+		gearRatio2 = 9.8,
+		gearRatio3 = 5.8,
+		gearRatio4 = 3.75,
+		maxSpeed = 88f,
+		engineLoudness = 75,
+		engineQuality = 85,
+		brakingForce = 55,
+		stoppingMovementForce = 4.0f,
+		rollInfluence = 0.4f,
+		steeringIncrement = 0.04,
+		steeringClamp = 0.3,
+		suspensionStiffness = 70,
+		suspensionCompression = 4.83,
+		suspensionDamping = 3.88,
+		maxSuspensionTravelCm = 12,
+		suspensionRestLength = 0.20f,
+		wheelFriction = 2.0f,
+		frontEndHealth = 10500,
+		rearEndHealth = 7500,
+		seats = 2,
+
+		wheel FrontLeft
+		{
+			front = true,
+			offset = 1.2368 -0.6842 2.0658,
+			radius = 0.60f,
+			width = 0.35f,
+		}
+
+		wheel FrontRight
+		{
+			front = true,
+			offset = -1.2368 -0.6842 2.0658,
+			radius = 0.60f,
+			width = 0.35f,
+		}
+
+		wheel RearLeft
+		{
+			front = false,
+			offset = 1.2368 -0.6842 -1.9737,
+			radius = 0.60f,
+			width = 0.35f,
+		}
+
+		wheel RearRight
+		{
+			front = false,
+			offset = -1.2368 -0.6842 -1.9737,
+			radius = 0.60f,
+			width = 0.35f,
+		}
+
+		template = PassengerSeat2,
+
+		passenger FrontLeft
+		{
+			showPassenger = true,
+			hasRoof = true,
+
+			position inside
+			{
+				offset = 0.5844 0.1299 0.0779,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+
+			position outside
+			{
+				offset = 1.8571 -1.2597 -0.6753,
+				rotate = 0.0000 0.0000 0.0000,
+				area = SeatFrontLeft,
+			}
+		}
+
+		passenger FrontRight
+		{
+			showPassenger = true,
+			hasRoof = true,
+
+			position inside
+			{
+				offset = -0.5844 0.1299 0.0779,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+
+			position outside
+			{
+				offset = -1.8701 -1.2597 -0.6623,
+				rotate = 0.0000 0.0000 0.0000,
+				area = SeatFrontRight,
+			}
+		}
+
+		area Engine
+		{
+			xywh = 0.0000 3.5395 2.2632 1.0789,
+		}
+
+		area TruckBed
+		{
+			xywh = 0.0000 -3.6184 2.0526 1.0789,
+		}
+
+		area SeatFrontLeft
+		{
+			xywh = 2.0132 0.1053 1.0789 1.0789,
+		}
+
+		area SeatFrontRight
+		{
+			xywh = -2.0132 0.0921 1.0789 1.0789,
+		}
+
+		area GasTank
+		{
+			xywh = -1.7237 -1.1579 0.4211 0.4211,
+		}
+
+		area TireFrontLeft
+		{
+			xywh = 2.0000 2.0921 0.4211 0.4211,
+		}
+
+		area TireFrontRight
+		{
+			xywh = -2.0000 2.0921 0.4211 0.4211,
+		}
+
+		area TireRearLeft
+		{
+			xywh = 2.0000 -1.9211 0.4211 0.4211,
+		}
+
+		area TireRearRight
+		{
+			xywh = -2.0000 -1.9211 0.4211 0.4211,
+		}
+
+		template = m12warthogTrunk,
+
+		part m12warthogTrunk
+		{
+			container
+			{
+				capacity = 550,
+			}
+		}
+
+		template = m12warthogSeats/part/SeatFrontLeft,
+		template = m12warthogSeats/part/SeatFrontRight,
+
+		part Seat*
+		{
+			table install
+			{
+				skills = Mechanics:2,
+				recipes = Intermediate Mechanics,
+			}
+
+			table uninstall
+			{
+				skills = Mechanics:2,
+				recipes = Intermediate Mechanics,
+			}
+		}
+
+		template = m12warthogGloveBox/part/m12warthogGloveBox1,
+
+		part m12warthogGloveBox1
+		{
+			model m12transportinterior
+			{
+				file = m12transportinterior,
+				offset = 0 0 0,
+				rotate = 0 0 0,
+				scale = 1.0,
+			}
+		}
+
+		template = m12warthogGloveBox/part/m12warthogGloveBox2,
+		template = GasTank,
+
+		part GasTank
+		{
+			container
+			{
+				conditionAffectsCapacity = false,
+				capacity = 90,
+			}
+
+			install
+			{
+				skills = Mechanics:7,
+				recipes = Intermediate Mechanics,
+			}
+
+			uninstall
+			{
+				skills = Mechanics:7,
+				recipes = Intermediate Mechanics,
+			}
+		}
+
+		template = Battery,
+		template = Engine,
+		template = M12Mufflers/part/M12Muffler,
+
+		part M12Muffler
+		{
+			model m12mufflers
+			{
+				file = m12warthogmuffler,
+				offset = 0 0 0,
+				rotate = 0 0 0,
+				scale = 1.0,
+			}
+
+			table install
+			{
+				recipes = Intermediate Mechanics,
+			}
+
+			table uninstall
+			{
+				recipes = Intermediate Mechanics,
+			}
+		}
+
+		template = m12warthogEngineDoor/part/EngineDoor,
+
+		part Heater
+		{
+			category = engine,
+
+			lua
+			{
+				update = Vehicles.Update.Heater,
+			}
+		}
+
+		part PassengerCompartment
+		{
+			category = nodisplay,
+
+			lua
+			{
+				update = Vehicles.Update.PassengerCompartment,
+			}
+		}
+
+		template = m12warthogWindshield/part/Windshield,
+
+		part Windshield*
+		{
+			table install
+			{
+				recipes = Intermediate Mechanics,
+			}
+
+			table uninstall
+			{
+				recipes = Intermediate Mechanics,
+			}
+		}
+
+		template = m12transportDoors/part/DoorFrontLeft,
+		template = m12transportDoors/part/DoorFrontRight,
+		template = m12TrunkDoor/part/TrunkDoor,
+		template = TireM12,
+		template = m12twindows,
+
+		part TireFrontLeft
+		{
+			model InflatedTirePlusWheel
+			{
+				file = m12warthogwheelleft,
+			}
+		}
+
+		part TireFrontRight
+		{
+			model InflatedTirePlusWheel
+			{
+				file = m12warthogwheelright,
+			}
+		}
+
+		part TireRearLeft
+		{
+			model InflatedTirePlusWheel
+			{
+				file = m12warthogwheelleft,
+			}
+		}
+
+		part TireRearRight
+		{
+			model InflatedTirePlusWheel
+			{
+				file = m12warthogwheelright,
+			}
+		}
+
+		template = Brake,
+
+		part Brake*
+		{
+			table install
+			{
+				skills = Mechanics:6,
+				recipes = Intermediate Mechanics,
+			}
+
+			table uninstall
+			{
+				skills = Mechanics:6,
+				recipes = Intermediate Mechanics,
+			}
+		}
+
+		template = Suspension,
+
+		part Suspension*
+		{
+			table install
+			{
+				skills = Mechanics:6,
+				recipes = Intermediate Mechanics,
+			}
+
+			table uninstall
+			{
+				skills = Mechanics:6,
+				recipes = Intermediate Mechanics,
+			}
+		}
+
+		template = Radio,
+
+		part Radio
+		{
+			model m12transportradio
+			{
+				file = m12transportradio,
+				offset = 0 0 0,
+				rotate = 0 0 0,
+				scale = 1.0,
+			}
+		}
+
+		template = Headlight,
+
+		attachment trailer
+		{
+			offset = 0.0000 -0.3867 -3.2133,
+			rotate = 0.0000 0.0000 0.0000,
+			zoffset = -1.0000,
+		}
+
+		attachment trailerfront
+		{
+			offset = 0.0000 -0.3867 3.1600,
+			rotate = 0.0000 0.0000 0.0000,
+			zoffset = 1.0000,
+		}
+	}
+}

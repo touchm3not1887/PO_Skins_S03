@@ -1,0 +1,1419 @@
+module Base
+{
+	model ZRAP_Base
+	{
+		mesh = vehicles/zrap|zrap_body,
+		shader = vehicle_noreflect,
+		invertX = FALSE,
+		scale = 0.01,
+	}
+	model ZRAP_InteriorBase
+	{
+		mesh = vehicles/zrap|zrap_interior,
+		texture = Vehicles/zrap_interiortest,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	model ZRAP_Battery
+	{
+		mesh = vehicles/zrap|zrap_battery,
+		texture = Vehicles/zrap_interiortest,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+	}
+	model ZRAP_Rooftrack
+	{
+		mesh = vehicles/zrap|zrap_roofrack,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+	}
+	model ZRAP_wheel
+	{
+		mesh = vehicles/zrap_wheel,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	model ZRAP_AdvancedWheel
+	{
+		mesh = vehicles/zrap_wheel_2,
+		shader = vehiclewheel,
+		scale = 0.01,
+	}
+	model ZRAP_SpareWheelLeft
+    	{
+		mesh = vehicles/zrap|zrap_wheel_module_l,
+		scale = 0.01,
+		shader = vehiclewheel,
+    	}
+	model ZRAP_SpareWheelRight
+    	{
+		mesh = vehicles/zrap|zrap_wheel_module_r,
+		scale = 0.01,
+		shader = vehiclewheel,
+    	}
+	model ZRAP_SpareAdvancedWheelLeft
+    	{
+		mesh = vehicles/zrap|zrap_wheel_module_lm,
+		scale = 0.01,
+		shader = vehiclewheel,
+    	}
+	model ZRAP_SpareAdvancedWheelRight
+    	{
+		mesh = vehicles/zrap|zrap_wheel_module_rm,
+		scale = 0.01,
+		shader = vehiclewheel,
+    	}
+	model ZRAP_ExtraGasCanLeft
+    	{
+		mesh = vehicles/zrap|zrap_canister_l,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+    	}
+	model ZRAP_ExtraGasCanLeftBack
+    	{
+		mesh = vehicles/zrap|zrap_canister_lb,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+    	}
+	model ZRAP_ExtraGasCanRight
+    	{
+		mesh = vehicles/zrap|zrap_canister_r,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+    	}
+	model ZRAP_FrontLeftSeat
+    	{
+		mesh = vehicles/zrap|zrap_seat_fl,
+		texture = Vehicles/zrap_interiortest,
+		shader = vehiclewheel,
+		scale = 0.01,
+    	}
+	model ZRAP_FrontRightSeat
+    	{
+		mesh = vehicles/zrap|zrap_seat_fr,
+		texture = Vehicles/zrap_interiortest,
+		shader = vehiclewheel,
+		scale = 0.01,
+    	}
+	model ZRAP_RearLeftSeat
+    	{
+		mesh = vehicles/zrap|zrap_seat_rl,
+		texture = Vehicles/zrap_interiortest,
+		shader = vehiclewheel,
+		scale = 0.01,
+    	}
+	model ZRAP_RearRightSeat
+    	{
+		mesh = vehicles/zrap|zrap_seat_rr,
+		texture = Vehicles/zrap_interiortest,
+		shader = vehiclewheel,
+		scale = 0.01,
+    	}
+	model ZRAP_Hood
+	{
+		mesh = vehicles/zrap|zrap_hood,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+		static = FALSE,
+		boneWeight = Hood 1.0,		
+	}
+	model ZRAP_Windshield
+	{
+		mesh = vehicles/zrap|zrap_windshield,
+		shader = vehicle,
+		scale = 0.01,
+	}
+	model ZRAP_FrontLeftWindow
+	{
+		mesh = vehicles/zrap|zrap_window_fl,
+		shader = vehicle,
+		scale = 0.01,
+		static = FALSE,
+		boneWeight =  Window_FrontLeft 1.0,
+	}
+	model ZRAP_FrontLeftDoor
+	{
+		mesh = vehicles/zrap|zrap_door_fl,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+		static = FALSE,
+		boneWeight = Door_FrontLeft 1.0,
+	}
+	model ZRAP_FrontRightWindow
+	{
+		mesh = vehicles/zrap|zrap_window_fr,
+		shader = vehicle,
+		scale = 0.01,
+		static = FALSE,
+		boneWeight = Window_FrontRight 1.0,
+	}
+	model ZRAP_FrontRightDoor
+	{
+		mesh = vehicles/zrap|zrap_door_fr,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+		static = FALSE,
+		boneWeight = Door_FrontRight 1.0,
+	}
+	model ZRAP_RearLeftWindow
+	{
+		mesh = vehicles/zrap|zrap_window_rl,
+		shader = vehicle,
+		scale = 0.01,
+		static = FALSE,
+		boneWeight = Window_RearLeft 1.0,
+	}
+	model ZRAP_RearLeftDoor
+	{
+		mesh = vehicles/zrap|zrap_door_rl,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+		static = FALSE,
+		boneWeight = Door_RearLeft 1.0,
+	}
+	model ZRAP_RearRightWindow
+	{
+		mesh = vehicles/zrap|zrap_window_rr,
+		shader = vehicle,
+		scale = 0.01,
+		static = FALSE,
+		boneWeight = Door_RearRight 1.0,
+	}
+	model ZRAP_RearRightDoor
+	{
+		mesh = vehicles/zrap|zrap_door_rr,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+		static = FALSE,
+		boneWeight = Door_RearRight 1.0,
+	}
+	model ZRAP_SideLeftWindow
+    	{
+		mesh = vehicles/zrap|zrap_middlewindow_l,
+		shader = vehicle,
+		scale = 0.01,
+		static = FALSE,
+		boneWeight = Window_RearLeft 1.0,
+    	}
+	model ZRAP_SideRightWindow
+	{
+		mesh = vehicles/zrap|zrap_middlewindow_r,
+		shader = vehicle,
+		scale = 0.01,
+		static = FALSE,
+		boneWeight = Window_RearRight 1.0,
+    	}
+	model ZRAP_WindshieldArmor
+	{
+		mesh = vehicles/zrap|zrap_armor_windshield,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+	}
+	model ZRAP_FrontArmor
+	{
+		mesh = vehicles/zrap|zrap_armor_front,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+	}
+	model ZRAP_FrontLeftWindowArmor
+	{
+		mesh = vehicles/zrap|zrap_armor_window_fl,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+		static = FALSE,
+		boneWeight = Door_FrontLeft 1.0,
+	}
+	model ZRAP_FrontRightWindowArmor
+   	{
+		mesh = vehicles/zrap|zrap_armor_window_fr,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+		static = FALSE,
+		boneWeight = Door_FrontRight 1.0,
+    	}
+	model ZRAP_MiddleLeftWindowArmor
+    	{
+		mesh = vehicles/zrap|zrap_armor_middlewindow_l,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+   	}
+	model ZRAP_MiddleRightWindowArmor
+    	{
+		mesh = vehicles/zrap|zrap_armor_middlewindow_r,
+		shader = vehicle_noreflect,
+		scale = 0.01,	
+    	}
+	model ZRAP_RearLeftWindowArmor
+    	{
+		mesh = vehicles/zrap|zrap_armor_window_rl,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+		static = FALSE,
+		boneWeight = Door_RearLeft 1.0,
+   	}
+	model ZRAP_RearRightWindowArmor
+    	{
+		mesh = vehicles/zrap|zrap_armor_window_rr,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+		static = FALSE,
+		boneWeight = Door_RearRight 1.0,
+    	}
+	model ZRAP_TrunkArmor
+    	{
+		mesh = vehicles/zrap|zrap_armor_trunk,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+    	}
+	model ZRAP_GasTankArmor
+    	{
+		mesh = vehicles/zrap|zrap_armor_fueltank,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+    	}
+	model ZRAP_WindshieldArmorMakeshift
+	{
+		mesh = vehicles/zrap|zrap_armor_windshield_makeshift,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+	}
+	model ZRAP_FrontArmorMakeshift
+	{
+		mesh = vehicles/zrap|zrap_armor_front_makeshift,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+	}
+	model ZRAP_FrontLeftWindowArmorMakeshift
+	{
+		mesh = vehicles/zrap|zrap_armor_window_fl_makeshift,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+		static = FALSE,
+		boneWeight = Door_FrontLeft 1.0,
+	}
+	model ZRAP_FrontRightWindowArmorMakeshift
+   	{
+		mesh = vehicles/zrap|zrap_armor_window_fr_makeshift,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+		static = FALSE,
+		boneWeight = Door_FrontRight 1.0,
+    	}
+	model ZRAP_MiddleLeftWindowArmorMakeshift
+    	{
+		mesh = vehicles/zrap|zrap_armor_middlewindow_l_makeshift,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+   	}
+	model ZRAP_MiddleRightWindowArmorMakeshift
+    	{
+		mesh = vehicles/zrap|zrap_armor_middlewindow_r_makeshift,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+    	}
+	model ZRAP_RearLeftWindowArmorMakeshift
+    	{
+		mesh = vehicles/zrap|zrap_armor_window_rl_makeshift,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+		static = FALSE,
+		boneWeight = Door_RearLeft 1.0,
+   	}
+	model ZRAP_RearRightWindowArmorMakeshift
+    	{
+		mesh = vehicles/zrap|zrap_armor_window_rr_makeshift,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+		static = FALSE,
+		boneWeight = Door_RearRight 1.0,
+
+    	}
+	model ZRAP_TrunkArmorMakeshift
+    	{
+		mesh = vehicles/zrap|zrap_armor_trunk_makeshift,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+    	}
+	model ZRAP_GasTankArmorMakeshift
+    	{
+		mesh = vehicles/zrap|zrap_armor_fueltank_makeshift,
+		shader = vehicle_noreflect,
+		scale = 0.01,
+    	}
+	vehicle ZRAP
+	{
+		mechanicType = 2,
+		offRoadEfficiency = 10,
+		engineRepairLevel = 4,
+		playerDamageProtection = 0.5,
+
+		model
+		{
+			file = ZRAP_Base,
+			scale = 1.0000,
+			offset = 0.0000 0.0000 -0.1200,
+		}
+
+		skin
+		{
+			texture = Vehicles/ZRAP_Black,
+		}
+
+		skin
+		{
+			texture = Vehicles/ZRAP_Desert,
+		}
+
+		skin
+		{
+			texture = Vehicles/ZRAP_Green,
+		}
+
+		skin
+		{
+			texture = Vehicles/ZRAP_White,
+		}
+
+		skin
+		{
+			texture = Vehicles/ZRAP_BlackCamo,
+		}
+
+		skin
+		{
+			texture = Vehicles/ZRAP_DesertCamo,
+		}
+
+		skin
+		{
+			texture = Vehicles/ZRAP_GreenCamo,
+		}
+
+		skin
+		{
+			texture = Vehicles/ZRAP_WhiteCamo,
+		}
+
+		skin
+		{
+			texture = Vehicles/ZRAP_BlackRed,
+		}
+
+		skin
+		{
+			texture = Vehicles/ZRAP_GreyRedStripes,
+		}
+
+		skin
+		{
+			texture = Vehicles/ZRAP_Militek,
+		}
+
+		textureRust = Vehicles/ZRAP_Rust,
+		textureMask = Vehicles/ZRAP_Mask,
+		textureLights = Vehicles/ZRAP_Lights,
+		textureShadow = Shadows/ZRAP_Shadow,
+		textureDamage1Shell = Vehicles/ZRAP_Damage1,
+		textureDamage2Shell = Vehicles/ZRAP_Damage2,
+		textureDamage1Overlay = Vehicles/ZRAP_Blood,
+		textureDamage2Overlay = Vehicles/ZRAP_Blood,
+
+		sound
+		{
+			engine = VehicleEngineSUV,
+			engineStart = VehicleEngineSUV,
+			engineTurnOff = VehicleEngineSUV,
+			horn = VehicleHornStandard,
+			ignitionFail = VehicleIgnitionFailSUV,
+		}
+
+		extents = 2.0600 1.7600 5.3000,
+		mass = 1200,
+		physicsChassisShape = 2.0000 1.7600 5.3000,
+		centerOfMassOffset = 0.0000 0.9100 -0.0100,
+		shadowExtents = 6.1162 5.7061,
+		shadowOffset = 0.0000 -0.0300,
+		engineForce = 14800,
+		maxSpeed = 95f,
+		engineLoudness = 90,
+		engineQuality = 90,
+		brakingForce = 60,
+		gearRatioCount = 4,
+		gearRatioR = 4.7,
+		gearRatio1 = 3.6,
+		gearRatio2 = 2.2,
+		gearRatio3 = 1.3,
+		gearRatio4 = 0.8,
+		stoppingMovementForce = 3.5f,
+		rollInfluence = 0.9f,
+		steeringIncrement = 0.022,
+		steeringClamp = 0.4,
+		suspensionStiffness = 30,
+		suspensionCompression = 3.83,
+		suspensionDamping = 2.88,
+		maxSuspensionTravelCm = 15,
+		suspensionRestLength = 0.20f,
+		wheelFriction = 2.1f,
+		frontEndHealth = 15000,
+		rearEndHealth = 15000,
+		seats = 4,
+
+		wheel FrontLeft
+		{
+			front = true,
+			offset = 0.8000 0.1500 1.8200,
+			radius = 0.40f,
+			width = 0.30f,
+		}
+
+		wheel FrontRight
+		{
+			front = true,
+			offset = -0.8000 0.1500 1.8200,
+			radius = 0.40f,
+			width = 0.30f,
+		}
+
+		wheel RearLeft
+		{
+			front = false,
+			offset = 0.8000 0.1500 -1.5200,
+			radius = 0.40f,
+			width = 0.30f,
+		}
+
+		wheel RearRight
+		{
+			front = false,
+			offset = -0.8000 0.1500 -1.5200,
+			radius = 0.40f,
+			width = 0.30f,
+		}
+
+		template = PassengerSeat4,
+
+		passenger FrontLeft
+		{
+			showPassenger = true,
+			hasRoof = true,
+			door = DoorFrontLeft,
+			area = SeatFrontLeft,
+
+			position inside
+			{
+				offset = 0.4000 0.7700 0.2900,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+
+			position outside
+			{
+				offset = 1.3000 -0.2600 0.1700,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+		}
+
+		passenger FrontRight
+		{
+			showPassenger = true,
+			hasRoof = true,
+			door = DoorFrontRight,
+			area = SeatFrontRight,
+
+			position inside
+			{
+				offset = -0.4000 0.7700 0.2900,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+
+			position outside
+			{
+				offset = -1.3000 -0.2600 0.1700,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+		}
+
+		passenger RearLeft
+		{
+			showPassenger = true,
+			hasRoof = true,
+			door = DoorRearLeft,
+			area = SeatRearLeft,
+
+			position inside
+			{
+				offset = 0.4700 0.8000 -0.9500,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+
+			position outside
+			{
+				offset = 0.3200 -0.2600 -2.7000,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+		}
+
+		passenger RearRight
+		{
+			showPassenger = true,
+			hasRoof = true,
+			door = DoorRearRight,
+			area = SeatRearRight,
+
+			position inside
+			{
+				offset = -0.4700 0.8000 -0.9500,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+
+			position outside
+			{
+				offset = -0.3200 -0.2600 -2.7000,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+		}
+
+		area Engine
+		{
+			xywh = 1.3500 1.7000 0.6400 1.2000,
+		}
+
+		area TruckBed
+		{
+			xywh = 0.0000 -3.0700 2.0600 0.8400,
+		}
+
+		area SeatFrontLeft
+		{
+			xywh = 1.3900 0.3400 0.7200 1.0000,
+		}
+
+		area SeatFrontRight
+		{
+			xywh = -1.3900 0.3400 0.7200 1.0000,
+		}
+
+		area SeatRearLeft
+		{
+			xywh = 0.4100 -3.0700 0.7200 0.8200,
+		}
+
+		area SeatRearRight
+		{
+			xywh = -0.4100 -3.0700 0.7200 0.8200,
+		}
+
+		area GasTank
+		{
+			xywh = 0.0000 -1.5300 3.5000 1.2000,
+		}
+
+		area AttachedGasCan
+		{
+			xywh = -1.5300 -1.7300 1.0000 1.2000,
+		}
+
+		area TireFrontLeft
+		{
+			xywh = 1.2500 1.7000 0.4400 1.0000,
+		}
+
+		area TireFrontRight
+		{
+			xywh = -1.2500 1.7000 0.4400 1.0000,
+		}
+
+		area TireRearLeft
+		{
+			xywh = 1.2500 -1.6200 0.4400 1.0000,
+		}
+
+		area TireRearRight
+		{
+			xywh = -1.2500 -1.6200 0.4400 1.0000,
+		}
+
+		area TireSpareLeft
+		{
+			xywh = 1.2500 -0.6000 0.4400 1.0000,
+		}
+
+		area TireSpareRight
+		{
+			xywh = -1.2500 -0.6000 0.4400 1.0000,
+		}
+
+		area RoofRack
+		{
+			xywh = 0.0000 -1.8400 3.0000 3.0000,
+		}
+
+		area ArmorTechnicalArea
+		{
+			xywh = 0.0000 -0.9700 1.3600 0.8000,
+		}
+
+		template = GasTank,
+
+		part GasTank
+		{
+			install
+			{
+				skills = Mechanics:5,
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+			}
+
+			uninstall
+			{
+				skills = Mechanics:5,
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+			}
+		}
+
+		template = Battery,
+
+		part Battery
+		{
+			model Default
+			{
+				file = ZRAP_Battery,
+			}
+		}
+
+		template = Engine,
+		template = Muffler,
+		template = ZRAP_Seat/part/ZRAP_SeatFrontLeft,
+		template = ZRAP_Seat/part/ZRAP_SeatFrontRight,
+		template = ZRAP_Seat/part/ZRAP_SeatRearLeft,
+		template = ZRAP_Seat/part/ZRAP_SeatRearRight,
+
+		part ZRAP_Seat*
+		{
+			table install
+			{
+				skills = Mechanics:2,
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+				test = Vehicles.InstallTest.Default,
+
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+			}
+
+			table uninstall
+			{
+				skills = Mechanics:2,
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+				test = Vehicles.UninstallTest.Default,
+				requireEmpty = true,
+
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+			}
+
+			lua
+			{
+				create = Vehicles.Create.Default,
+			}
+		}
+
+		template = Muffler,
+
+		part Muffler
+		{
+			table install
+			{
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+			}
+
+			table uninstall
+			{
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+			}
+		}
+
+		template = EngineDoor,
+
+		part EngineDoor
+		{
+			model engineDoor
+			{
+				file = ZRAP_Hood,
+			}
+
+			itemType = Base.ZRAP_EngineDoor,
+
+			anim Close
+			{
+				anim = ArmatureAction,
+				reverse = TRUE,
+				rate = 1.0,
+			}
+
+			anim Open
+			{
+				anim = ArmatureAction,
+				reverse = FALSE,
+				rate = 1.0,
+			}
+
+			anim Closed
+			{
+				anim = ArmatureAction,
+				reverse = FALSE,
+				animate = FALSE,
+			}
+
+			anim Opened
+			{
+				anim = ArmatureAction,
+				reverse = TRUE,
+				animate = FALSE,
+			}
+
+			table install
+			{
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+			}
+
+			table uninstall
+			{
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+			}
+		}
+
+		part Heater
+		{
+			category = engine,
+
+			lua
+			{
+				update = Vehicles.Update.Heater,
+			}
+		}
+
+		template = Windshield/part/Windshield,
+
+		part Windshield
+		{
+			model windshieldFront
+			{
+				file = ZRAP_Windshield,
+			}
+
+			window
+			{
+				openable = false,
+			}
+
+			table install
+			{
+				recipes =ZRAP Protocol Charlie - Field Maintenance,
+			}
+
+			table uninstall
+			{
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+				requireUninstalled = ZRAP_WindshieldArmor,
+			}
+
+			itemType = Base.ZRAP_Windshield,
+
+			lua
+			{
+				create = Vehicles.Create.Default,
+			}
+		}
+
+		template = Window/part/WindowMiddleLeft,
+
+		part WindowMiddleLeft
+		{
+			model Default
+			{
+				file = ZRAP_SideLeftWindow,
+			}
+
+			anim ClosedToOpen
+			{
+				anim = ArmatureAction,
+				animate = FALSE,
+			}
+
+			table install
+			{
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+				requireInstalled = ,
+			}
+
+			table uninstall
+			{
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+				requireUninstalled = ZRAP_MiddleLeftWindowArmorPart,
+			}
+
+			parent = DoorRearLeft,
+			area = TireSpareLeft,
+			itemType = Base.ZRAP_SideWindow,
+		}
+
+		template = Window/part/WindowMiddleRight,
+
+		part WindowMiddleRight
+		{
+			model Default
+			{
+				file = ZRAP_SideRightWindow,
+			}
+
+			anim ClosedToOpen
+			{
+				anim = ArmatureAction,
+				animate = FALSE,
+			}
+
+			table install
+			{
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+				requireInstalled = ,
+			}
+
+			table uninstall
+			{
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+				requireUninstalled = ZRAP_MiddleRightWindowArmorPart,
+			}
+
+			parent = DoorRearRight,
+			area = TireSpareRight,
+			itemType = Base.ZRAP_SideWindow,
+		}
+
+		template = Door/part/DoorFrontLeft,
+		template = Door/part/DoorFrontRight,
+		template = Door/part/DoorRearLeft,
+		template = Door/part/DoorRearRight,
+		template = Window/part/WindowFrontLeft,
+		template = Window/part/WindowFrontRight,
+		template = Window/part/WindowRearLeft,
+		template = Window/part/WindowRearRight,
+
+		part WindowFrontRight
+		{
+			model windowFR
+			{
+				file = ZRAP_FrontRightWindow,
+			}
+
+			anim ClosedToOpen
+			{
+				anim = ArmatureAction,
+				animate = FALSE,
+			}
+
+			table install
+			{
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+			}
+
+			table uninstall
+			{
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+				requireUninstalled = ZRAP_FrontRightWindowArmorPart,
+			}
+
+			itemType = Base.ZRAP_FrontWindow,
+			parent = DoorFrontRight,
+			area = SeatFrontRight,
+		}
+
+		part WindowFrontLeft
+		{
+			model Default
+			{
+				file = ZRAP_FrontLeftWindow,
+			}
+
+			anim ClosedToOpen
+			{
+				anim = ArmatureAction,
+				animate = FALSE,
+			}
+
+			table install
+			{
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+			}
+
+			table uninstall
+			{
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+				requireUninstalled = ZRAP_FrontLeftWindowArmorPart,
+			}
+
+			itemType = Base.ZRAP_FrontWindow,
+			parent = DoorFrontLeft,
+			area = SeatFrontLeft,
+		}
+
+		part WindowRearLeft
+		{
+			model Default
+			{
+				file = ZRAP_RearLeftWindow,
+			}
+
+			table install
+			{
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+			}
+
+			table uninstall
+			{
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+				requireUninstalled = ZRAP_RearLeftWindowArmorPart,
+			}
+
+
+			itemType = Base.ZRAP_RearSideWindow,
+			parent = DoorRearLeft,
+			area = SeatRearLeft,
+		}
+
+		part WindowRearRight
+		{
+			model Default
+			{
+				file = ZRAP_RearRightWindow,
+			}
+
+			table install
+			{
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+			}
+
+			table uninstall
+			{
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+				requireUninstalled = ZRAP_RearRightWindowArmorPart,
+			}
+
+			itemType = Base.ZRAP_RearSideWindow,
+			parent = DoorRearRight,
+			area = SeatRearRight,
+		}
+
+		part DoorFrontRight
+		{
+			model Default
+			{
+				file = ZRAP_FrontRightDoor,
+			}
+
+			itemType = Base.ZRAP_FrontRightDoor,
+
+			anim Close
+			{
+				anim = ArmatureAction,
+				reverse = TRUE,
+				rate = 1.0,
+			}
+
+			anim Open
+			{
+				anim = ArmatureAction,
+				reverse = FALSE,
+				rate = 1.0,
+			}
+
+			anim Closed
+			{
+				anim = ArmatureAction,
+				reverse = FALSE,
+				animate = FALSE,
+			}
+
+			anim Opened
+			{
+				anim = ArmatureAction,
+				reverse = TRUE,
+				animate = FALSE,
+			}
+		}
+
+		part DoorFrontLeft
+		{
+			model Default
+			{
+				file = ZRAP_FrontLeftDoor,
+			}
+
+			itemType = Base.ZRAP_FrontLeftDoor,
+
+			anim Close
+			{
+				anim = ArmatureAction,
+				reverse = TRUE,
+				rate = 1.0,
+			}
+
+			anim Open
+			{
+				anim = ArmatureAction,
+				reverse = FALSE,
+				rate = 1.0,
+			}
+
+			anim Closed
+			{
+				anim = ArmatureAction,
+				reverse = FALSE,
+				animate = FALSE,
+			}
+
+			anim Opened
+			{
+				anim = ArmatureAction,
+				reverse = TRUE,
+				animate = FALSE,
+			}
+		}
+
+		part DoorRearRight
+		{
+			model Default
+			{
+				file = ZRAP_RearRightDoor,
+			}
+
+			itemType = Base.ZRAP_RearRightDoor,
+
+			anim Close
+			{
+				anim = ArmatureAction,
+				reverse = TRUE,
+				rate = 1.0,
+			}
+
+			anim Open
+			{
+				anim = ArmatureAction,
+				reverse = FALSE,
+				rate = 1.0,
+			}
+
+			anim Closed
+			{
+				anim = ArmatureAction,
+				reverse = FALSE,
+				animate = FALSE,
+			}
+
+			anim Opened
+			{
+				anim = ArmatureAction,
+				reverse = TRUE,
+				animate = FALSE,
+			}
+		}
+
+		part DoorRearLeft
+		{
+			model Default
+			{
+				file = ZRAP_RearLeftDoor,
+			}
+
+			itemType = Base.ZRAP_RearLeftDoor,
+
+			anim Close
+			{
+				anim = ArmatureAction,
+				reverse = TRUE,
+				rate = 1.0,
+			}
+
+			anim Open
+			{
+				anim = ArmatureAction,
+				reverse = FALSE,
+				rate = 1.0,
+			}
+
+			anim Closed
+			{
+				anim = ArmatureAction,
+				reverse = FALSE,
+				animate = FALSE,
+			}
+
+			anim Opened
+			{
+				anim = ArmatureAction,
+				reverse = TRUE,
+				animate = FALSE,
+			}
+		}
+
+		template = ZRAP_TrunkTemplate,
+		template = ZRAP_ArmorTemplate,
+		template = ZRAP_RooftrackTemplate,
+		template = ZRAP_ExtraWheelTemplate,
+		template = ZRAP_AttachedGasCanTemplate/part/ZRAP_AttachedGasCanLeft,
+		template = ZRAP_AttachedGasCanTemplate/part/ZRAP_AttachedGasCanLeftBack,
+		template = ZRAP_AttachedGasCanTemplate/part/ZRAP_AttachedGasCanRight,
+
+		part PassengerCompartment
+		{
+			category = nodisplay,
+
+			lua
+			{
+				update = Vehicles.Update.PassengerCompartment,
+			}
+		}
+
+		template = Tire,
+
+		part TireFrontLeft
+		{
+			model InflatedTirePlusWheel
+			{
+				file = ZRAP_wheel,
+				rotate = 0 0 0,
+			}
+
+			model AdvancedTire
+			{
+				file = ZRAP_AdvancedWheel,
+				rotate = 0 0 0,
+			}
+
+			table ZRAP_Models
+			{
+				ZRAP_RegularTire2 = InflatedTirePlusWheel,
+				ZRAP_AdvancedTire2 = AdvancedTire,
+			}
+
+			itemType = Base.ZRAP_RegularTire;Base.ZRAP_AdvancedTire,
+			area = TireFrontLeft,
+			wheel = FrontLeft,
+
+			table install
+			{
+				requireInstalled = BrakeRearLeft;SuspensionRearLeft,
+				complete = ZRAP_ArmoredVehicle.InstallComplete.Tire,
+			}
+
+			table uninstall
+			{
+				complete = ZRAP_ArmoredVehicle.UninstallComplete.Tire,
+			}
+
+			lua
+			{
+				create = ZRAP_ArmoredVehicle.Create.Tire,
+				init = ZRAP_ArmoredVehicle.Init.Tire,
+				checkOperate = Vehicles.CheckOperate.Tire,
+				update = Vehicles.Update.Tire,
+			}
+		}
+
+		part TireRearLeft
+		{
+			model InflatedTirePlusWheel
+			{
+				file = ZRAP_wheel,
+				rotate = 0 0 0,
+			}
+
+			model AdvancedTire
+			{
+				file = ZRAP_AdvancedWheel,
+				rotate = 0 0 0,
+			}
+
+			table ZRAP_Models
+			{
+				ZRAP_RegularTire2 = InflatedTirePlusWheel,
+				ZRAP_AdvancedTire2 = AdvancedTire,
+			}
+
+			itemType = Base.ZRAP_RegularTire;Base.ZRAP_AdvancedTire,
+			area = TireRearLeft,
+			wheel = RearLeft,
+
+			table install
+			{
+				requireInstalled = BrakeRearLeft;SuspensionRearLeft,
+				complete = ZRAP_ArmoredVehicle.InstallComplete.Tire,
+			}
+
+			table uninstall
+			{
+				complete = ZRAP_ArmoredVehicle.UninstallComplete.Tire,
+			}
+
+			lua
+			{
+				create = ZRAP_ArmoredVehicle.Create.Tire,
+				init = ZRAP_ArmoredVehicle.Init.Tire,
+				checkOperate = Vehicles.CheckOperate.Tire,
+				update = Vehicles.Update.Tire,
+			}
+		}
+
+		part TireFrontRight
+		{
+			model InflatedTirePlusWheel
+			{
+				file = ZRAP_wheel,
+				rotate = 0 180 0,
+			}
+
+			model AdvancedTire
+			{
+				file = ZRAP_AdvancedWheel,
+				rotate = 0 180 0,
+			}
+
+			table ZRAP_Models
+			{
+				ZRAP_RegularTire2 = InflatedTirePlusWheel,
+				ZRAP_AdvancedTire2 = AdvancedTire,
+			}
+
+			itemType = Base.ZRAP_RegularTire;Base.ZRAP_AdvancedTire,
+			area = TireFrontRight,
+			wheel = FrontRight,
+
+			table install
+			{
+				requireInstalled = BrakeRearLeft;SuspensionRearLeft,
+				complete = ZRAP_ArmoredVehicle.InstallComplete.Tire,
+			}
+
+			table uninstall
+			{
+				complete = ZRAP_ArmoredVehicle.UninstallComplete.Tire,
+			}
+
+			lua
+			{
+				create = ZRAP_ArmoredVehicle.Create.Tire,
+				init = ZRAP_ArmoredVehicle.Init.Tire,
+				checkOperate = Vehicles.CheckOperate.Tire,
+				update = Vehicles.Update.Tire,
+			}
+		}
+
+		part TireRearRight
+		{
+			model InflatedTirePlusWheel
+			{
+				file = ZRAP_wheel,
+				rotate = 0 180 0,
+			}
+
+			model AdvancedTire
+			{
+				file = ZRAP_AdvancedWheel,
+				rotate = 0 180 0,
+			}
+
+			table ZRAP_Models
+			{
+				ZRAP_RegularTire2 = InflatedTirePlusWheel,
+				ZRAP_AdvancedTire2 = AdvancedTire,
+			}
+
+			itemType = Base.ZRAP_RegularTire;Base.ZRAP_AdvancedTire,
+			area = TireRearRight,
+			wheel = RearRight,
+
+			table install
+			{
+				requireInstalled = BrakeRearLeft;SuspensionRearLeft,
+				complete = ZRAP_ArmoredVehicle.InstallComplete.Tire,
+			}
+
+			table uninstall
+			{
+				complete = ZRAP_ArmoredVehicle.UninstallComplete.Tire,
+			}
+
+			lua
+			{
+				create = ZRAP_ArmoredVehicle.Create.Tire,
+				init = ZRAP_ArmoredVehicle.Init.Tire,
+				checkOperate = Vehicles.CheckOperate.Tire,
+				update = Vehicles.Update.Tire,
+			}
+		}
+
+		template = Brake,
+
+		part Brake*
+		{
+			table install
+			{
+				skills = Mechanics:4,
+				recipes =ZRAP Protocol Charlie - Field Maintenance,
+			}
+
+			table uninstall
+			{
+				skills = Mechanics:4,
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+			}
+		}
+
+		template = Suspension,
+
+		part Suspension*
+		{
+			table install
+			{
+				skills = Mechanics:4,
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+			}
+
+			table uninstall
+			{
+				skills = Mechanics:4,
+				recipes = ZRAP Protocol Charlie - Field Maintenance,
+			}
+		}
+
+		template = Radio,
+		template = Headlight,
+
+		attachment trailer
+		{
+			offset = 0.0000 0.3000 -2.3300,
+			rotate = 0.0000 0.0000 0.0000,
+			zoffset = -1.0000,
+		}
+
+		attachment trailerfront
+		{
+			offset = 0.0000 0.2900 2.5200,
+			rotate = 0.0000 0.0000 0.0000,
+			zoffset = 1.0000,
+		}
+	}
+}

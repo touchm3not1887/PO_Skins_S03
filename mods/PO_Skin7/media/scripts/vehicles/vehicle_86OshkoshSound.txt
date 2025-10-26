@@ -1,0 +1,15 @@
+module Base
+{
+	sound VehicleH92amgeneral
+	{
+		category = Vehicle,
+		clip
+		{
+			file = media/sound/sirenalarm998.ogg,
+		}
+	}
+
+	
+
+
+}

@@ -1,0 +1,31 @@
+module Base
+{
+	sound VehicleH92amgeneral
+	{
+		category = Vehicle,
+		clip
+		{
+			file = media/sound/sirenalarm998.ogg,
+		}
+	}
+
+	sound VehicleHNubAsianVan
+	{
+		category = Vehicle,
+		clip
+		{
+			file = media/sound/VehicleHornNubAsianVan.ogg,
+		}
+	}
+
+	sound VehicleHKelo
+	{
+		category = Vehicle,
+		clip
+		{
+			file = media/sound/VehicleHornKelo.ogg,
+		}
+	}
+
+
+}

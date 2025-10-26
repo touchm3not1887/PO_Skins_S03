@@ -1,0 +1,46 @@
+module Base
+{
+
+	sound VehicleTruckHornie
+	{
+		category = Vehicle,
+		clip
+		{
+			file = media/sound/papapdol.ogg,
+		}
+	}
+
+	sound TruckSirenWall
+	{
+		category = Vehicle,
+		loop = true,
+		clip
+		{
+			file = media/sound/papapdol1.wav,
+			distanceMax = 50,
+		}
+	}
+
+	sound TruckSirenYelp
+	{
+		category = Vehicle,
+		loop = true,
+		clip
+		{
+			file = media/sound/papapdol2.wav,
+			distanceMax = 50,
+		}
+	}
+
+	sound TruckSirenAlarm
+	{
+		category = Vehicle,
+		loop = true,
+		clip
+		{
+			file = media/sound/papapdol3.wav,
+			distanceMax = 50,
+		}
+	}
+
+}

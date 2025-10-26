@@ -1,0 +1,829 @@
+module Base
+{
+	template vehicle ZRAP_ArmorTemplate
+	{
+
+part ZRAP_WindshieldArmorPart
+{
+	model WindshieldArmor1
+	{
+		file = ZRAP_WindshieldArmor,
+	}
+	model WindshieldArmor2
+	{
+		file = ZRAP_WindshieldArmorMakeshift,
+	}
+	table ZRAP_Models 
+        {
+                ZRAP_WindshieldArmor = WindshieldArmor1,
+                ZRAP_WindshieldArmorMakeshift = WindshieldArmor2,	
+        }
+
+
+	table ZRAP_Armor
+	{
+        	part1 = Windshield,
+        	ZRAP_DefenceLevels
+		{
+            		ZRAP_WindshieldArmor = 232.0, 
+            		ZRAP_WindshieldArmorMakeshift = 116.0, 
+        	}
+	}
+
+
+
+
+        area = Engine,
+        category = bodywork,
+        itemType = Base.ZRAP_WindshieldArmor;Base.ZRAP_WindshieldArmorMakeshift,
+        mechanicRequireKey = true,
+	specificItem = false,
+
+		table install
+			{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Wrench,
+                        	count = 1,
+                        	keep = true,
+				equip = primary,
+                    		}
+                	}
+
+                	time = 1000,
+                	skills = Mechanics:6,
+                	recipes = ZRAP Protocol Charlie - Field Maintenance,
+                	test = Vehicles.InstallTest.Default,
+                	complete = ZRAP_ArmoredVehicle.InstallComplete.DefaultModel,
+            		}
+
+            		table uninstall
+            		{
+                	items
+                	{
+                    	1
+                    		{
+  				type = Base.Wrench,
+				count = 1,
+				keep = true,
+				equip = primary,
+                    		}
+                	}
+
+			time = 1000,
+			skills = Mechanics:6,
+			recipes = ZRAP Protocol Charlie - Field Maintenance,
+                	test = Vehicles.UninstallTest.Default,
+			complete = ZRAP_ArmoredVehicle.UninstallComplete.DefaultModel,
+            		}
+
+            		lua
+            		{
+			init = ZRAP_ArmoredVehicle.Init.DefaultModel,
+
+			}
+ }
+
+part ZRAP_FrontLeftWindowArmorPart
+{
+	model FrontLeftWindowArmor1
+	{
+		file = ZRAP_FrontLeftWindowArmor,
+	}
+	model FrontLeftWindowArmor2
+	{
+		file = ZRAP_FrontLeftWindowArmorMakeshift,
+	}
+
+	table ZRAP_Models 
+        {
+                ZRAP_FrontWindowArmor = FrontLeftWindowArmor1,
+                ZRAP_FrontWindowArmorMakeshift = FrontLeftWindowArmor2,	
+        }
+
+	table ZRAP_Armor
+ 	{
+		part1 = DoorFrontLeft,
+		part2 = WindowFrontLeft,
+        
+ 		ZRAP_DefenceLevels
+  		{
+              	ZRAP_FrontWindowArmor = 220.0, 
+              	ZRAP_FrontWindowArmorMakeshift = 110.0, 
+   		}
+ 	}
+
+
+	category = door,
+	itemType = Base.ZRAP_FrontWindowArmor;Base.ZRAP_FrontWindowArmorMakeshift,
+	parent = DoorFrontLeft,
+	specificItem = false,
+	area = SeatFrontLeft,
+
+	table install
+			{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Wrench,
+                        	count = 1,
+                        	keep = true,
+				equip = primary,
+                    		}
+                	}
+			requireInstalled = DoorFrontLeft;WindowFrontLeft,
+                	time = 1000,
+                	skills = Mechanics:6,
+                	recipes = ZRAP Protocol Charlie - Field Maintenance,
+                	test = Vehicles.InstallTest.Default,
+                	complete = ZRAP_ArmoredVehicle.InstallComplete.DefaultModel,
+            		}
+
+            		table uninstall
+            		{
+                	items
+                	{
+                    	1
+                    		{
+  				type = Base.Wrench,
+				count = 1,
+				keep = true,
+				equip = primary,
+                    		}
+                	}
+
+			time = 1000,
+			skills = Mechanics:6,
+			recipes = ZRAP Protocol Charlie - Field Maintenance,
+                	test = Vehicles.UninstallTest.Default,
+			complete = ZRAP_ArmoredVehicle.UninstallComplete.DefaultModel,
+            		}
+
+            		lua
+            		{
+			init = ZRAP_ArmoredVehicle.Init.DefaultModel,
+			}
+}
+
+part ZRAP_FrontRightWindowArmorPart
+{
+	model FrontRightWindowArmor1
+	{
+		file = ZRAP_FrontRightWindowArmor,
+	}
+	model FrontRightWindowArmor2
+	{
+		file = ZRAP_FrontRightWindowArmorMakeshift,
+	}
+	table ZRAP_Models 
+        {
+                ZRAP_FrontWindowArmor = FrontRightWindowArmor1,
+                ZRAP_FrontWindowArmorMakeshift = FrontRightWindowArmor2,	
+        }
+
+	table ZRAP_Armor
+ 	{
+		part1 = DoorFrontRight,
+		part2 = WindowFrontRight,
+        
+ 		ZRAP_DefenceLevels
+  		{
+              	ZRAP_FrontWindowArmor = 220.0, 
+              	ZRAP_FrontWindowArmorMakeshift = 110.0, 
+   		}
+ 	}
+
+
+	category = door,
+	itemType =  Base.ZRAP_FrontWindowArmor;Base.ZRAP_FrontWindowArmorMakeshift,
+	parent = DoorFrontRight,
+	specificItem = false,
+	area = SeatFrontRight,
+
+	
+	table install
+			{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Wrench,
+                        	count = 1,
+                        	keep = true,
+				equip = primary,
+                    		}
+                	}
+			requireInstalled = DoorFrontRight;WindowFrontRight,
+                	time = 1000,
+                	skills = Mechanics:6,
+                	recipes = ZRAP Protocol Charlie - Field Maintenance,
+                	test = Vehicles.InstallTest.Default,
+                	complete = ZRAP_ArmoredVehicle.InstallComplete.DefaultModel,
+            		}
+
+            		table uninstall
+            		{
+                	items
+                	{
+                    	1
+                    		{
+  				type = Base.Wrench,
+				count = 1,
+				keep = true,
+				equip = primary,
+                    		}
+                	}
+
+			time = 1000,
+			skills = Mechanics:6,
+			recipes = ZRAP Protocol Charlie - Field Maintenance,
+                	test = Vehicles.UninstallTest.Default,
+			complete = ZRAP_ArmoredVehicle.UninstallComplete.DefaultModel,
+            		}
+
+            		lua
+            		{
+			init = ZRAP_ArmoredVehicle.Init.DefaultModel,
+			}
+			
+}
+
+part ZRAP_MiddleLeftWindowArmorPart
+{
+	model MiddleLeftWindowArmor1
+	{
+		file = ZRAP_MiddleLeftWindowArmor,
+	}
+	model MiddleLeftWindowArmor2
+	{
+		file = ZRAP_MiddleLeftWindowArmorMakeshift,
+	}
+
+	table ZRAP_Models 
+        {
+                ZRAP_MiddleWindowArmor = MiddleLeftWindowArmor1,
+                ZRAP_MiddleWindowArmorMakeshift = MiddleLeftWindowArmor2,	
+        }
+
+	table ZRAP_Armor
+ 	{
+		part1 = WindowMiddleLeft,
+        
+ 		ZRAP_DefenceLevels
+  		{
+              	ZRAP_MiddleWindowArmor = 232.0, 
+              	ZRAP_MiddleWindowArmorMakeshift = 116.0, 
+   		}
+ 	}
+
+        area = ArmorTechnicalArea,
+        category = door,
+        itemType = Base.ZRAP_MiddleWindowArmor;Base.ZRAP_MiddleWindowArmorMakeshift,
+        mechanicRequireKey = true,
+	specificItem = false,
+
+	table install
+			{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Wrench,
+                        	count = 1,
+                        	keep = true,
+				equip = primary,
+                    		}
+                	}
+
+                	time = 1000,
+                	skills = Mechanics:6,
+                	recipes = ZRAP Protocol Charlie - Field Maintenance,
+                	test = Vehicles.InstallTest.Default,
+                	complete = ZRAP_ArmoredVehicle.InstallComplete.DefaultModel,
+            		}
+
+            		table uninstall
+            		{
+                	items
+                	{
+                    	1
+                    		{
+  				type = Base.Wrench,
+				count = 1,
+				keep = true,
+				equip = primary,
+                    		}
+                	}
+
+			time = 1000,
+			skills = Mechanics:6,
+			recipes = ZRAP Protocol Charlie - Field Maintenance,
+                	test = Vehicles.UninstallTest.Default,
+			complete = ZRAP_ArmoredVehicle.UninstallComplete.DefaultModel,
+            		}
+
+            		lua
+            		{
+			init = ZRAP_ArmoredVehicle.Init.DefaultModel,
+			}
+
+
+}
+
+part ZRAP_MiddleRightWindowArmorPart
+{
+	model MiddleRightWindowArmor1
+	{
+		file = ZRAP_MiddleRightWindowArmor,
+	}
+	model MiddleRightWindowArmor2
+	{
+		file = ZRAP_MiddleRightWindowArmorMakeshift,
+	}
+	table ZRAP_Models 
+        {
+                ZRAP_MiddleWindowArmor = MiddleRightWindowArmor1,
+                ZRAP_MiddleWindowArmorMakeshift = MiddleRightWindowArmor2,	
+        }
+
+	table ZRAP_Armor
+ 	{
+		part1 = WindowMiddleRight,
+        
+ 		ZRAP_DefenceLevels
+  		{
+              	ZRAP_MiddleWindowArmor = 232.0, 
+              	ZRAP_MiddleWindowArmorMakeshift = 116.0, 
+   		}
+ 	}
+
+        area = ArmorTechnicalArea,
+        category = door,
+        itemType = Base.ZRAP_MiddleWindowArmor;Base.ZRAP_MiddleWindowArmorMakeshift,
+        mechanicRequireKey = true,
+	specificItem = false,
+
+	table install
+			{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Wrench,
+                        	count = 1,
+                        	keep = true,
+				equip = primary,
+                    		}
+                	}
+
+                	time = 1000,
+                	skills = Mechanics:6,
+                	recipes = ZRAP Protocol Charlie - Field Maintenance,
+                	test = Vehicles.InstallTest.Default,
+                	complete = ZRAP_ArmoredVehicle.InstallComplete.DefaultModel,
+            		}
+
+            		table uninstall
+            		{
+                	items
+                	{
+                    	1
+                    		{
+  				type = Base.Wrench,
+				count = 1,
+				keep = true,
+				equip = primary,
+                    		}
+                	}
+
+			time = 1000,
+			skills = Mechanics:6,
+			recipes = ZRAP Protocol Charlie - Field Maintenance,
+                	test = Vehicles.UninstallTest.Default,
+			complete = ZRAP_ArmoredVehicle.UninstallComplete.DefaultModel,
+            		}
+
+            		lua
+            		{
+			init = ZRAP_ArmoredVehicle.Init.DefaultModel,
+			}
+
+}
+
+
+
+part ZRAP_RearLeftWindowArmorPart
+{
+	model RearLeftWindowArmor1
+	{
+		file = ZRAP_RearLeftWindowArmor,
+	}
+	model RearLeftWindowArmor2
+	{
+		file = ZRAP_RearLeftWindowArmorMakeshift,
+	}
+	table ZRAP_Models 
+        {
+              ZRAP_RearWindowArmor = RearLeftWindowArmor1,
+              ZRAP_RearWindowArmorMakeshift = RearLeftWindowArmor2,	
+        }
+
+	table ZRAP_Armor
+ 	{
+		part1 = WindowRearLeft,
+		part2 = DoorRearLeft,
+        
+ 		ZRAP_DefenceLevels
+  		{
+              	ZRAP_RearWindowArmor = 216.0, 
+              	ZRAP_RearWindowArmorMakeshift = 118.0, 
+   		}
+ 	}
+
+	category = door,
+	itemType = Base.ZRAP_RearWindowArmor;Base.ZRAP_RearWindowArmorMakeshift,
+	parent = DoorRearLeft,
+	specificItem = false,
+	area = SeatRearLeft,
+
+	table install
+			{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Wrench,
+                        	count = 1,
+                        	keep = true,
+				equip = primary,
+                    		}
+                	}
+			requireInstalled = DoorRearLeft;WindowRearLeft,
+                	time = 1000,
+                	skills = Mechanics:6,
+                	recipes = ZRAP Protocol Charlie - Field Maintenance,
+                	test = Vehicles.InstallTest.Default,
+                	complete = ZRAP_ArmoredVehicle.InstallComplete.DefaultModel,
+            		}
+
+            		table uninstall
+            		{
+                	items
+                	{
+                    	1
+                    		{
+  				type = Base.Wrench,
+				count = 1,
+				keep = true,
+				equip = primary,
+                    		}
+                	}
+
+			time = 1000,
+			skills = Mechanics:6,
+			recipes = ZRAP Protocol Charlie - Field Maintenance,
+                	test = Vehicles.UninstallTest.Default,
+			complete = ZRAP_ArmoredVehicle.UninstallComplete.DefaultModel,
+            		}
+
+            		lua
+            		{
+			init = ZRAP_ArmoredVehicle.Init.DefaultModel,
+			}
+
+}
+
+part ZRAP_RearRightWindowArmorPart
+{
+	model RearRightWindowArmor1
+	{
+		file = ZRAP_RearRightWindowArmor,
+	}
+	model RearRightWindowArmor2
+	{
+		file = ZRAP_RearRightWindowArmorMakeshift,
+	}
+	table ZRAP_Models 
+        {
+                ZRAP_RearWindowArmor = RearRightWindowArmor1,
+                ZRAP_RearWindowArmorMakeshift = RearRightWindowArmor2,	
+        }
+
+	table ZRAP_Armor
+ 	{
+		part1 = WindowRearRight,
+		part2 = DoorRearRight,
+        
+ 		ZRAP_DefenceLevels
+  		{
+              	ZRAP_RearWindowArmor = 232.0, 
+              	ZRAP_RearWindowArmorMakeshift = 116.0, 
+   		}
+ 	}
+
+	category = door,
+	itemType = Base.ZRAP_RearWindowArmor;Base.ZRAP_RearWindowArmorMakeshift,
+	parent = DoorRearRight,
+	specificItem = false,
+	area = SeatRearRight,
+
+	table install
+			{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Wrench,
+                        	count = 1,
+                        	keep = true,
+				equip = primary,
+                    		}
+                	}
+			requireInstalled = DoorRearRight;WindowRearRight,
+                	time = 1000,
+                	skills = Mechanics:6,
+                	recipes = ZRAP Protocol Charlie - Field Maintenance,
+                	test = Vehicles.InstallTest.Default,
+                	complete = ZRAP_ArmoredVehicle.InstallComplete.DefaultModel,
+            		}
+
+            		table uninstall
+            		{
+                	items
+                	{
+                    	1
+                    		{
+  				type = Base.Wrench,
+				count = 1,
+				keep = true,
+				equip = primary,
+                    		}
+                	}
+
+			time = 1000,
+			skills = Mechanics:6,
+			recipes = ZRAP Protocol Charlie - Field Maintenance,
+                	test = Vehicles.UninstallTest.Default,
+			complete = ZRAP_ArmoredVehicle.UninstallComplete.DefaultModel,
+            		}
+
+            		lua
+            		{
+			init = ZRAP_ArmoredVehicle.Init.DefaultModel,
+			}
+}
+
+part ZRAP_TrunkArmorPart
+{
+	model TrunkArmor1
+	{
+		file = ZRAP_TrunkArmor,
+	}
+
+	model TrunkArmor2
+	{
+		file = ZRAP_TrunkArmorMakeshift,
+	}
+
+	table ZRAP_Models 
+        {
+              ZRAP_TrunkArmor = TrunkArmor1,
+              ZRAP_TrunkArmorMakeshift = TrunkArmor2,	
+        }
+
+	table ZRAP_Armor
+	{
+        	part1 = TruckBed,
+		
+
+        	ZRAP_DefenceLevels
+		{
+            		ZRAP_TrunkArmor = 132.0, 
+            		ZRAP_TrunkArmorMakeshift = 116.0, 
+        	}
+	}
+
+        area = TruckBed,
+        category = bodywork,
+        itemType = Base.ZRAP_TrunkArmor;Base.ZRAP_TrunkArmorMakeshift,
+        mechanicRequireKey = true,
+	specificItem = false,
+
+	
+	table install
+			{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Wrench,
+                        	count = 1,
+                        	keep = true,
+				equip = primary,
+                    		}
+                	}
+
+                	time = 1500,
+                	skills = Mechanics:6,
+                	recipes = ZRAP Protocol Charlie - Field Maintenance,
+                	test = Vehicles.InstallTest.Default,
+                	complete = ZRAP_ArmoredVehicle.InstallComplete.DefaultModel,
+            		}
+
+            		table uninstall
+            		{
+                	items
+                	{
+                    	1
+                    		{
+  				type = Base.Wrench,
+				count = 1,
+				keep = true,
+				equip = primary,
+                    		}
+                	}
+
+			time = 1500,
+			skills = Mechanics:6,
+			recipes = ZRAP Protocol Charlie - Field Maintenance,
+                	test = Vehicles.UninstallTest.Default,
+			complete = ZRAP_ArmoredVehicle.UninstallComplete.DefaultModel,
+            		}
+
+            		lua
+            		{
+			init = ZRAP_ArmoredVehicle.Init.DefaultModel,
+			}
+}
+
+part ZRAP_GasTankArmorPart
+{
+	model GasTankArmor1
+	{
+		file = ZRAP_GasTankArmor,
+	}
+	model GasTankArmor2
+	{
+		file = ZRAP_GasTankArmorMakeshift,
+	}
+
+	table ZRAP_Models 
+        {
+               ZRAP_GasTankArmor = GasTankArmor1,
+               ZRAP_GasTankArmorMakeshift = GasTankArmor2,	
+        }
+
+	table ZRAP_Armor
+	{
+        	part1 = GasTank,
+        	ZRAP_DefenceLevels
+		{
+            		ZRAP_GasTankArmor = 130.0, 
+            		ZRAP_GasTankArmorMakeshift = 115.0, 
+        	}
+	}
+
+        area = GasTank,
+        category = gastank,
+        itemType = Base.ZRAP_GasTankArmor;Base.ZRAP_GasTankArmorMakeshift,
+        mechanicRequireKey = true,
+	specificItem = false,
+
+	table install
+			{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Wrench,
+                        	count = 1,
+                        	keep = true,
+				equip = primary,
+                    		}
+                	}
+
+                	time = 1500,
+                	skills = Mechanics:6,
+                	recipes = ZRAP Protocol Charlie - Field Maintenance,
+                	test = Vehicles.InstallTest.Default,
+                	complete = ZRAP_ArmoredVehicle.InstallComplete.DefaultModel,
+            		}
+
+            		table uninstall
+            		{
+                	items
+                	{
+                    	1
+                    		{
+  				type = Base.Wrench,
+				count = 1,
+				keep = true,
+				equip = primary,
+                    		}
+                	}
+
+			time = 1500,
+			skills = Mechanics:6,
+			recipes = ZRAP Protocol Charlie - Field Maintenance,
+                	test = Vehicles.UninstallTest.Default,
+			complete = ZRAP_ArmoredVehicle.UninstallComplete.DefaultModel,
+            		}
+
+            		lua
+            		{
+			init = ZRAP_ArmoredVehicle.Init.DefaultModel,
+			}
+}
+		
+part ZRAP_FrontArmorPart
+{
+	model FrontArmor1
+	{
+		file = ZRAP_FrontArmor,
+	} 
+	model FrontArmor2
+	{
+		file = ZRAP_FrontArmorMakeshift,
+	}
+
+	table ZRAP_Models 
+        {
+                ZRAP_FrontArmor = FrontArmor1,
+                ZRAP_FrontArmorMakeshift = FrontArmor2,	
+        }
+
+	table ZRAP_Armor
+	{
+        	part1 = EngineDoor,
+		part2 = HeadlightLeft,
+		part3 = HeadlightRight,
+        	ZRAP_DefenceLevels
+		{
+            		ZRAP_FrontArmor = 944.0, 
+            		ZRAP_FrontArmorMakeshift = 522.0, 
+        	}
+	}
+
+        area = Engine,
+        category = bodywork,
+        itemType = Base.ZRAP_FrontArmor;Base.ZRAP_FrontArmorMakeshift,
+    	mechanicRequireKey = true,
+	specificItem = false,    
+
+	table install
+			{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Wrench,
+                        	count = 1,
+                        	keep = true,
+				equip = primary,
+                    		}
+                	}
+
+                	time = 1500,
+                	skills = Mechanics:6,
+                	recipes = ZRAP Protocol Charlie - Field Maintenance,
+                	test = Vehicles.InstallTest.Default,
+                	complete = ZRAP_ArmoredVehicle.InstallComplete.DefaultModel,
+   			  
+            		}
+
+            		table uninstall
+            		{
+                	items
+                	{
+                    	1
+                    		{
+  				type = Base.Wrench,
+				count = 1,
+				keep = true,
+				equip = primary,
+                    		}
+                	}
+
+			time = 1500,
+			skills = Mechanics:6,
+			recipes = ZRAP Protocol Charlie - Field Maintenance,
+                	test = Vehicles.UninstallTest.Default,
+			complete = ZRAP_ArmoredVehicle.UninstallComplete.DefaultModel,
+            		}
+
+            		lua
+            		{
+			
+			init = ZRAP_ArmoredVehicle.Init.DefaultModel,
+			
+			}
+
+	
+}
+
+}
+}
+

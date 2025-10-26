@@ -1,0 +1,17 @@
+module Base
+{
+
+    vehicle ATA_Luton
+    {
+        template! = ATA_Luton,
+        skin
+        {
+            texture = Vehicles/ATA_Luton_base,
+        }
+          skin
+        {
+            texture = Vehicles/ATA_Luton_Cultist,
+        }
+        
+    }
+}

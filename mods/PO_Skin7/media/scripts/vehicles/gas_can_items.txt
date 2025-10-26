@@ -1,0 +1,76 @@
+module Base
+{
+
+	model ZRAP_GasCanModel
+    {
+        mesh = ZRAP_GasCan,
+        texture = GasCan/ZRAP_GasCan,
+    }
+
+    model ZRAP_GasCan_GroundModel
+    {
+        mesh = WorldItems/ZRAP_GasCan_Ground,
+        texture = GasCan/ZRAP_GasCanGround,
+    }
+
+	item ZRAP_GasCanEmpty2
+     {
+        DisplayCategory         = VehicleMaintenance,
+        Weight	                = 3,
+        CanStoreWater	        = TRUE,
+        Type	                = Normal,
+        DisplayName    = Empty Steel Gas Can,
+        Icon   =   ZRAP_GasCanEmpty_Icon,
+        MaxCapacity = 100,
+        ConditionMax = 100,
+	ConditionMin = 100,
+        MechanicsItem = TRUE,
+	ReplaceOnUseOn          = WaterSource-ZRAP_GasCanFull2,
+        SurvivalGear            = TRUE,
+        StaticModel             = ZRAP_GasCanModel,
+        WorldStaticModel        = ZRAP_GasCan_GroundModel,
+        ReplaceInSecondHand     = Bag_ZRAP_GasCanModel_LHand holdingbagleft,
+        ReplaceInPrimaryHand    = Bag_ZRAP_GasCanModel_RHand holdingbagright,
+        Tags                    = EmptyPetrol,
+        ReplaceTypes            = PetrolSource ZRAP_GasCanFull2;WaterSource ZRAP_GasCanFullWater2,
+     }
+
+	item ZRAP_GasCanFull2
+    {
+        DisplayCategory         = VehicleMaintenance,
+        Weight	                = 10,
+        Type	                = Drainable,
+        DisplayName	            = Steel Gas Can with Petrol,
+        UseWhileEquipped	    = FALSE,
+        UseDelta	            = 0.0526,
+        ReplaceOnDeplete	    = ZRAP_GasCanEmpty2,
+        Icon	                = ZRAP_GasCanPetrol_Icon,
+	ConditionMax = 100,
+	ConditionMin = 100,
+        StaticModel             = ZRAP_GasCanModel,
+        WorldStaticModel        = ZRAP_GasCan_GroundModel,
+        ReplaceInSecondHand     = Bag_ZRAP_GasCanModel_LHand holdingbagleft,
+        ReplaceInPrimaryHand    = Bag_ZRAP_GasCanModel_RHand holdingbagright,
+        Tags                    = Petrol,
+    }
+
+	item ZRAP_GasCanFullWater2
+    {
+        DisplayCategory         = Water,
+        IsWaterSource	        = TRUE,
+        Weight	                = 10,
+        CanStoreWater	        = TRUE,
+        Type	                = Drainable,
+        DisplayName	            = Steel Gas Can with Water,
+        UseWhileEquipped	    = FALSE,
+        UseDelta	            = 0.05,
+        ReplaceOnDeplete	    = ZRAP_GasCanEmpty2,
+        Icon	                = ZRAP_GasCanWater_Icon,
+	ConditionMax = 100,
+	ConditionMin = 100,
+        StaticModel             = ZRAP_GasCanModel,
+        WorldStaticModel        = ZRAP_GasCan_GroundModel,
+        ReplaceInSecondHand     = Bag_ZRAP_GasCanModel_LHand holdingbagleft,
+        ReplaceInPrimaryHand    = Bag_ZRAP_GasCanModel_RHand holdingbagright,
+    }
+}

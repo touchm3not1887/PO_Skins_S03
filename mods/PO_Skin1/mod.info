@@ -1,0 +1,5 @@
+name=Custom Cars Skins
+poster=poster.png
+id=PO_Skin1
+require=ATA_Samara,ATA_Mustang
+description=Iron Within Cars Skin

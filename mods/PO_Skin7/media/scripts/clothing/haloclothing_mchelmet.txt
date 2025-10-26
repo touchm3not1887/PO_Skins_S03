@@ -1,0 +1,22 @@
+module Base
+{
+	item Hat_MCHelmet
+	{
+	    	DisplayCategory = Accessory,
+		Type = Clothing,
+		DisplayName = Master Chief Helmet,
+		ClothingItem = Hat_MCHelmet,
+		BodyLocation = FullHat,
+		Icon = mchelmet,
+		CanHaveHoles = false,
+		CombatSpeedModifier = 0.95,
+		BiteDefense = 120,
+        	ScratchDefense = 120,
+        	ChanceToFall = 0,
+        	Insulation = 1.0,
+        	WindResistance = 1.0,
+		WaterResistance = 1.0,
+        	BloodLocation = FullHelmet,
+		WorldStaticModel = MChelmetWI,
+	}
+}
